@@ -1,6 +1,9 @@
 import React from "react";
 import "./Footer.scss";
 
+import { ReactComponent as HomeIcon } from "../../assets/icons/add.svg";
+
+
 const Footer = () => {
 	return (
 		<>

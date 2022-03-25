@@ -26,17 +26,21 @@ const PageCalculate = () => {
 		setCost(e.target.value);
 	};
 
-	const [cpw, setCpw] = useState("");
+	const [cpw, setCpw] = useState(0);
 
 	const calculateCPW = () => {
-		const result = cost / ((2023 - year) * 12 * wears);
+		let result = "";
+
+		result = cost / ((2023 - year) * 12 * wears);
 		console.log("calculating...");
 		console.log("result is: ", result);
+
 		setCpw(result);
 		//! resets
 		setYear("");
 		setWears("");
 		setCost("");
+		setCpw(0);
 	};
 
 	useEffect(() => {
@@ -86,6 +90,7 @@ const PageCalculate = () => {
 						<InputSelect
 							options={years}
 							label="Year bought"
+							value={years}
 							handleOnChange={handleOnYearChange}
 						/>
 

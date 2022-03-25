@@ -8,7 +8,7 @@ import ConfirmationModal from "./components/ConfirmationModal/ConfirmationModal"
 const App = () => {
   return (
     <div className="App">
-      <ConfirmationModal></ConfirmationModal>
+      <ConfirmationModal modalOn={true}></ConfirmationModal>
       <Switch>
         <Redirect from="/" to="/search" exact />
 

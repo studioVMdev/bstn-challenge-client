@@ -7,7 +7,6 @@ import { Route, Switch, Redirect } from "react-router-dom";
 const App = () => {
 	return (
 		<div className="App">
-			<h1>hello</h1>
 			<Switch>
 				<Redirect from="/" to="/search" exact />
 

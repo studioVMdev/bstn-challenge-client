@@ -8,7 +8,6 @@ import ConfirmationModal from "./components/ConfirmationModal/ConfirmationModal"
 const App = () => {
   return (
     <div className="App">
-      <h1>hello</h1>
       <ConfirmationModal></ConfirmationModal>
       <Switch>
         <Redirect from="/" to="/search" exact />

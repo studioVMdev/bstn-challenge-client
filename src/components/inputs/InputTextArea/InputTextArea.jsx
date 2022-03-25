@@ -10,7 +10,7 @@ const InputTextArea = ({ name, label, value, type, handleOnChange }) => {
 			</label>
 			<textarea
 				onChange={handleOnChange}
-				className="input__text-area input__field  p-medium"
+				className="input__field  p-medium input__text-area "
 				type="text"
 				name={name}
 				label={label}

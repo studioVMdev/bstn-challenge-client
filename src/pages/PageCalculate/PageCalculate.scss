@@ -2,18 +2,25 @@
 
 .app__container{
   width: 100%;
-  border: 1px solid red;
+  // border: 1px solid red;
+  margin-bottom: 1rem;
 }
 .details{
   @include flex;
 
   &__wrapper{
-    @include flex(space-between,center,row)
+    @include flex(center,center,row);
+    gap: 2rem;
 ;  }
 }
 
 .input__wrapper{
   @include flex(flex-start, flex-start, column)
+}
+
+.upload__image{
+
+  background-image: url("../../assets/images/jacket.jpg")
 }
 
 
@@ -30,12 +37,12 @@
 	}
   
 	&__field {
-
+    min-width: 4rem;
+    width: 100%;
 		border-radius: 2rem;
 		padding: 0.8rem 1.6rem;
     border:1px solid  $clr-secondary-lightgrey;
 		@include media-tablet {
-      // max-width: 28rem;
 		}
 
     &::placeholder{
@@ -51,10 +58,15 @@
     }
 	}
 	&__wrapper {
+    width:100%;
 	}
 }
 
-
+.calculator__container{
+  @include flex(flex-start, flex-start, column);
+  gap: 2rem;
+}
 .calculator__wrapper{
   @include flex;
+  gap: 2rem;
 }

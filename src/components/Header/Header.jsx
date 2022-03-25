@@ -5,7 +5,7 @@ const Header = () => {
 	return (
 		<>
 			<nav className="nav">
-				<div className="nav__back">◀</div>
+				{/* <div className="nav__back">◀</div> */}
 			</nav>
 		</>
 	);

@@ -18,31 +18,33 @@ const Footer = () => {
 								<div className="footer__nav-icon">
 									<HomeIcon />
 								</div>
-								<h5 className="footer__nav-label">Home</h5>
+								<h5 className="footer__nav-label p-medium">Home</h5>
 							</div>
 							<div className="footer__nav-item">
 								<div className="footer__nav-icon">
 									<SearchIcon />
 								</div>
-								<h5 className="footer__nav-label">Search</h5>
+								<h5 className="footer__nav-label p-medium">Search</h5>
 							</div>
 							<div className="footer__nav-item">
 								<div className="footer__nav-icon">
 									<AddIcon />
 								</div>
-								<h5 className="footer__nav-label">Add</h5>
+								<h5 className="footer__nav-label p-medium p-medium">
+									Add Item
+								</h5>
 							</div>
 							<div className="footer__nav-item">
 								<div className="footer__nav-icon">
 									<InboxIcon />
 								</div>
-								<h5 className="footer__nav-label">Inbox</h5>
+								<h5 className="footer__nav-label p-medium">Inbox</h5>
 							</div>
 							<div className="footer__nav-item">
 								<div className="footer__nav-icon">
 									<ProfileIcon />
 								</div>
-								<h5 className="footer__nav-label">Profile</h5>
+								<h5 className="footer__nav-label p-medium">Profile</h5>
 							</div>
 						</nav>
 					</div>

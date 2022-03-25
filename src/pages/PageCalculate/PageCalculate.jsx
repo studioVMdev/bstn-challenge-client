@@ -51,6 +51,7 @@ const PageCalculate = () => {
     cpw && console.log("showing modal");
     //!Show modal and pass cpd here
   }, [cpw]);
+
   const closeModal = (e) => {
     console.log(e);
 
@@ -73,26 +74,22 @@ const PageCalculate = () => {
 
       <section className="upload">
         <div className="upload__container app__container">
-          <h5 className="step-label">Step 1/3</h5>
+          <h5 className="step-label p-medium">Step 1/3</h5>
           <h3 className="step-description">Upload an image of your item</h3>
           <div className="upload__container app__container">
-            <h4 className="upload__subheading app">
-              Upload an Image of your item
-            </h4>
+            {/* <div className="upload__icons-container">
+							<div className="upload__icon"></div>
+						</div> */}
 
-            <div className="upload__icons-container">
-              <div className="upload__icon"></div>
-            </div>
-
-            <div className="upload__image">Image swapped here</div>
+            <div className="upload__image"></div>
           </div>
         </div>
       </section>
 
       <section className="details">
         <div className="details__container app__container">
-          <h5 className="step-label">Step 2/3</h5>
-          <h3 className="step-description">Upload an image of your item</h3>
+          <h5 className="step-label p-medium">Step 2/3</h5>
+          <h3 className="step-description">Tell us about your item</h3>
           <div className="details__wrapper">
             <InputText label="Brand" />
             <InputSelect options={["S", "M", "L"]} label="Size" />
@@ -104,7 +101,9 @@ const PageCalculate = () => {
 
       <section className="calculator">
         <div className="calculator__container app__container">
-          <h5 className="step-label">Step 3/3</h5>
+          <h5 className="step-label p-medium">Step 3/3</h5>
+          <h3 className="step-description">Tell us about your item</h3>
+          <h3 className="step-description"></h3>
           <div className="calculator__wrapper">
             <InputSelect
               options={years}

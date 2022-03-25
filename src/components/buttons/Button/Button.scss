@@ -8,7 +8,7 @@
   & > svg {
     fill: "red";
   }
-  height: 4rem;
+  height: 5rem;
   width: 100%;
   border-radius: 2rem;
   padding: 0.8rem 1.6rem;
@@ -22,7 +22,7 @@
   }
 
   &__primary {
-    background-color: $clr-primary-indigo;
+    background-color: $clr-green;
     color: $clr-primary-white;
     &:hover {
       background-color: $clr-bg-black;

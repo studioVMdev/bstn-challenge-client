@@ -3,8 +3,8 @@ import "./InputText.scss";
 
 const InputText = ({ name, label, value, handleOnChange }) => {
 	return (
-		<>
-			<label htmlFor={name} className="input__label h3">
+		<div className="input__wrapper">
+			<label htmlFor={name} className="input__label input__wrapper h3">
 				{" "}
 				{label}
 			</label>
@@ -17,7 +17,7 @@ const InputText = ({ name, label, value, handleOnChange }) => {
 				placeholder={label}
 				value={value}
 			/>
-		</>
+		</div>
 	);
 };
 

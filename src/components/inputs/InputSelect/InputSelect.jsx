@@ -3,7 +3,7 @@ import "./InputSelect.scss";
 
 const InputSelect = ({ options = null, label, value, handleOnChange }) => {
 	return (
-		<>
+		<div className="input__wrapper">
 			<label htmlFor={`${label}`} className="input__label h3">
 				{label}
 			</label>
@@ -13,7 +13,7 @@ const InputSelect = ({ options = null, label, value, handleOnChange }) => {
 				onChange={handleOnChange}
 			>
 				<option className=" input__field p-medium" value="">
-					Please Choose...
+					Select
 				</option>
 				{options &&
 					options.map((option) => (
@@ -26,7 +26,7 @@ const InputSelect = ({ options = null, label, value, handleOnChange }) => {
 						</option>
 					))}
 			</select>
-		</>
+		</div>
 	);
 };
 

@@ -1,19 +1,20 @@
 import "./App.scss";
 
-// import PageSearch from "./pages/PageSearch";
+import PageCalculate from "./pages/PageCalculate/PageCalculate";
 
 import { Route, Switch, Redirect } from "react-router-dom";
 
 const App = () => {
 	return (
 		<div className="App">
+			<h1>hello</h1>
 			<Switch>
 				<Redirect from="/" to="/search" exact />
 
 				<Route
 					path="/calculate"
 					exact
-					// render={(routerProps) => <PageSearch {...routerProps} />}
+					render={(routerProps) => <PageCalculate {...routerProps} />}
 				/>
 
 				<Route

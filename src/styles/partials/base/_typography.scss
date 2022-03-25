@@ -1,25 +1,26 @@
 @use "../utils" as *;
 
-@font-face {
-  font-family: "Titillium Web";
-  src: url("../../../assets/fonts/TitilliumWeb-Regular.ttf");
-  font-weight: 400;
-}
+// @font-face {
+//   font-family: "Titillium Web";
+//   src: url("../../../assets/fonts/TitilliumWeb-Regular.ttf");
+//   font-weight: 400;
+// }
 
-@font-face {
-  font-family: "Titillium Web Semi-Bold";
-  src: url("../../../assets/fonts/TitilliumWeb-SemiBold.ttf");
-  font-weight: 700;
-}
+// @font-face {
+//   font-family: "Titillium Web Semi-Bold";
+//   src: url("../../../assets/fonts/TitilliumWeb-SemiBold.ttf");
+//   font-weight: 700;
+// }
 
-:root {
-  font-family: "Titillium Web", Arial, Helvetica, sans-serif;
-  color: $clr-primary-black;
-  font-size: 0.625rem;
-  /* convert rem from default 16px to base 10 e.g. 1rem = 10px*/
-}
+// :root {
+//   font-family: "Titillium Web", Arial, Helvetica, sans-serif;
+//   color: $clr-primary-black;
+//   font-size: 0.625rem;
+//   /* convert rem from default 16px to base 10 e.g. 1rem = 10px*/
+// }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: 3.2rem;
   line-height: 4rem;
   font-weight: 600;
@@ -29,7 +30,8 @@ h1, .h1 {
   }
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: 2.4rem;
   line-height: 3.2rem;
   font-weight: 600;
@@ -39,7 +41,8 @@ h2, .h2 {
   }
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: 1.4rem;
   line-height: 2.2rem;
   font-weight: 600;
@@ -49,7 +52,8 @@ h3, .h3 {
   }
 }
 
-h4, .h4 {
+h4,
+.h4 {
   font-size: 1.2rem;
   line-height: 1.8rem;
   color: $clr-secondary-darkgrey;
@@ -60,7 +64,8 @@ h4, .h4 {
   }
 }
 
-p, .p-small {
+p,
+.p-small {
   font-size: 1.2rem;
   line-height: 1.8rem;
   font-weight: 400;
@@ -70,7 +75,8 @@ p, .p-small {
   }
 }
 
-p, .p-medium {
+p,
+.p-medium {
   font-size: 1.4rem;
   line-height: 2.2rem;
   font-weight: 400;
@@ -80,7 +86,8 @@ p, .p-medium {
   }
 }
 
-p, .p-large {
+p,
+.p-large {
   font-size: 1.6rem;
   line-height: 2.8rem;
   font-weight: 600;

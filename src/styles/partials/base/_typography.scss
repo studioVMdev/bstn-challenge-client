@@ -1,16 +1,9 @@
 @use "../utils" as *;
 
-// @font-face {
-//   font-family: "Titillium Web";
-//   src: url("../../../assets/fonts/TitilliumWeb-Regular.ttf");
-//   font-weight: 400;
-// }
-
-// @font-face {
-//   font-family: "Titillium Web Semi-Bold";
-//   src: url("../../../assets/fonts/TitilliumWeb-SemiBold.ttf");
-//   font-weight: 700;
-// }
+@font-face {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
 
 // :root {
 //   font-family: "Titillium Web", Arial, Helvetica, sans-serif;

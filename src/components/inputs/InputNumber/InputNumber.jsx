@@ -3,7 +3,7 @@ import "./InputNumber.scss";
 
 const InputNumber = ({ name, label, value, handleOnChange }) => {
 	return (
-		<>
+		<div className="input__wrapper">
 			<label htmlFor={name} className="input__label h3">
 				{" "}
 				{label}
@@ -18,7 +18,7 @@ const InputNumber = ({ name, label, value, handleOnChange }) => {
 				placeholder={label}
 				value={value}
 			/>
-		</>
+		</div>
 	);
 };
 

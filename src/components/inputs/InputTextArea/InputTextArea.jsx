@@ -3,7 +3,7 @@ import "./InputTextArea.scss";
 
 const InputTextArea = ({ name, label, value, type, handleOnChange }) => {
 	return (
-		<>
+		<div className="input__wrapper">
 			<label htmlFor={name} className="input__label h3">
 				{" "}
 				{label}
@@ -18,7 +18,7 @@ const InputTextArea = ({ name, label, value, type, handleOnChange }) => {
 				placeholder={label}
 				value={value}
 			></textarea>
-		</>
+		</div>
 	);
 };
 

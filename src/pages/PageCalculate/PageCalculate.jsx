@@ -13,7 +13,6 @@ import ConfirmationModal from "../../components/ConfirmationModal/ConfirmationMo
 const PageCalculate = () => {
   const [years, setYears] = useState([2022, 2021, 2020, 2019, 2018, 2017]);
   const [showModal, setShowModal] = useState(false);
-  const [sendCPW, setSendCPW] = useState(0);
 
   const [year, setYear] = useState("");
   const handleOnYearChange = (e) => {
@@ -29,15 +28,17 @@ const PageCalculate = () => {
     setCost(e.target.value);
   };
 
-  const [cpw, setCpw] = useState("");
+  const [cpw, setCpw] = useState(0);
 
   const calculateCPW = () => {
-    let result = cost / ((2023 - year) * 12 * wears);
+    let result = "";
+
+    result = cost / ((2023 - year) * 12 * wears);
     console.log("calculating...");
     console.log("result is: ", result);
+
     setCpw(result);
     if (year && cost && wears) {
-      setSendCPW(result);
       setShowModal(true);
     }
     //! resets
@@ -49,10 +50,8 @@ const PageCalculate = () => {
 
   useEffect(() => {
     cpw && console.log("showing modal");
-
     //!Show modal and pass cpd here
   }, [cpw]);
-
   const closeModal = (e) => {
     console.log(e);
 
@@ -64,49 +63,54 @@ const PageCalculate = () => {
       {showModal && (
         <ConfirmationModal
           closeModal={closeModal}
-          cpw={sendCPW}
+          cpw={cpw}
         ></ConfirmationModal>
       )}
       <section className="page-title">
-        <div className="page-title__container">
+        <div className="page-title__container app__container">
           <h1 className="page-title__heading">The CPW of your Garment</h1>
         </div>
       </section>
 
       <section className="upload">
-        <h5 className="step-label">Step 1/3</h5>
-        <div className="upload__container">
-          <h4 className="upload__subheading app">
-            Upload an Image of your item
-          </h4>
+        <div className="upload__container app__container">
+          <h5 className="step-label">Step 1/3</h5>
+          <h3 className="step-description">Upload an image of your item</h3>
+          <div className="upload__container app__container">
+            <h4 className="upload__subheading app">
+              Upload an Image of your item
+            </h4>
 
-          <div className="upload__icons-container">
-            <div className="upload__icon"></div>
+            <div className="upload__icons-container">
+              <div className="upload__icon"></div>
+            </div>
+
+            <div className="upload__image">Image swapped here</div>
           </div>
-
-          <div className="upload__image">Image swapped here</div>
         </div>
-
-        <InputTextArea name="description" label="Description" />
       </section>
 
       <section className="details">
-        <div className="details__container">
-          <InputText label="Brand" />
-          <InputSelect
-            options={["S", "M", "L"]}
-            label="Size"
-            // handleOnChange={}
-          />
+        <div className="details__container app__container">
+          <h5 className="step-label">Step 2/3</h5>
+          <h3 className="step-description">Upload an image of your item</h3>
+          <div className="details__wrapper">
+            <InputText label="Brand" />
+            <InputSelect options={["S", "M", "L"]} label="Size" />
+          </div>
+          <InputTextArea label="Description" />
         </div>
+        <div className="details__wrapper"></div>
       </section>
 
       <section className="calculator">
-        <div className="calculator__container">
+        <div className="calculator__container app__container">
+          <h5 className="step-label">Step 3/3</h5>
           <div className="calculator__wrapper">
             <InputSelect
               options={years}
               label="Year bought"
+              value={year}
               handleOnChange={handleOnYearChange}
             />
 

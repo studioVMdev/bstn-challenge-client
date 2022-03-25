@@ -1,35 +1,59 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import "./PageCalculate.scss";
 
 import InputTextArea from "../../components/inputs/InputTextArea/InputTextArea";
 import InputSelect from "../../components/inputs/InputSelect/InputSelect";
 import InputNumber from "../../components/inputs/InputNumber/InputNumber";
+import InputText from "../../components/inputs/InputText/InputText";
+
+import Button from "../../components/buttons/Button/Button";
 
 const PageCalculate = () => {
 	const [years, setYears] = useState([2022, 2021, 2020, 2019, 2018, 2017]);
 
 	const [year, setYear] = useState("");
-
 	const handleOnYearChange = (e) => {
 		setYear(e.target.value);
 	};
-
 	const [wears, setWears] = useState("");
-
 	const handleWearsOnChange = (e) => {
 		setWears(e.target.value);
 	};
 
+	const [cost, setCost] = useState("");
+	const handleCostOnChange = (e) => {
+		setCost(e.target.value);
+	};
+
+	const [cpw, setCpw] = useState("");
+
+	const calculateCPW = () => {
+		const result = cost / ((2023 - year) * 12 * wears);
+		console.log("calculating...");
+		console.log("result is: ", result);
+		setCpw(result);
+		//! resets
+		setYear("");
+		setWears("");
+		setCost("");
+	};
+
+	useEffect(() => {
+		cpw && console.log("showing modal");
+		//!Show modal and pass cpd here
+	}, [cpw]);
+
 	return (
 		<>
-			<div className="page-title">
+			<section className="page-title">
 				<div className="page-title__container">
 					<h1 className="page-title__heading">The CPW of your Garment</h1>
 				</div>
-			</div>
+			</section>
 
-			<div className="upload">
+			<section className="upload">
+				<h5 className="step-label">Step 1/3</h5>
 				<div className="upload__container">
 					<h4 className="upload__subheading app">
 						Upload an Image of your item
@@ -43,27 +67,50 @@ const PageCalculate = () => {
 				</div>
 
 				<InputTextArea name="description" label="Description" />
-			</div>
+			</section>
 
-			<div className="calculator">
-				<div className="calculator__container">
-					<div className="calculator__year">
-						<div className="calculator__wrapper-top">
-							<InputSelect
-								options={years}
-								label="Year Bought"
-								handleOnChange={handleOnYearChange}
-							/>
-
-							<InputNumber
-								label="Wears p/month"
-								value={wears}
-								handleOnChange={handleWearsOnChange}
-							/>
-						</div>
-					</div>
+			<section className="details">
+				<div className="details__container">
+					<InputText label="Brand" />
+					<InputSelect
+						options={["S", "M", "L"]}
+						label="Size"
+						// handleOnChange={}
+					/>
 				</div>
-			</div>
+			</section>
+
+			<section className="calculator">
+				<div className="calculator__container">
+					<div className="calculator__wrapper">
+						<InputSelect
+							options={years}
+							label="Year bought"
+							handleOnChange={handleOnYearChange}
+						/>
+
+						<InputNumber
+							label="Wears p/month"
+							value={wears}
+							handleOnChange={handleWearsOnChange}
+						/>
+
+						<InputNumber
+							label="£ Cost of item"
+							value={cost}
+							handleOnChange={handleCostOnChange}
+						/>
+					</div>
+
+					<Button
+						variant="primary"
+						value="Calculate"
+						icon=""
+						id=""
+						handleClick={calculateCPW}
+					/>
+				</div>
+			</section>
 		</>
 	);
 };

@@ -25,7 +25,7 @@ export default function ConfirmationModal({ closeModal, cost }) {
             <div className="modal__text">
               <h4>Your item's CPW is: </h4>
               <div className="modal__cpw">
-                <h2>£{cpw}</h2>
+                <h2>{cpw}</h2>
               </div>
             </div>
             {/* <div className="modal__globe"> */}

@@ -13,7 +13,8 @@
 
   background-color: rgba(0, 0, 0, 0.4);
 
-  & h4 {
+  & h4,
+  h2 {
     color: #24114a;
   }
   &__wrapper {
@@ -44,7 +45,7 @@
     margin-top: -70px;
     background-color: #90ee90;
 
-    max-width: 271;
+    max-width: 271px;
 
     border-radius: 12px;
     display: flex;
@@ -59,7 +60,8 @@
     width: 70%;
     text-align: center;
     & h4 {
-      font-size: 18px;
+      font-size: 16px;
+      line-height: 24px;
     }
   }
   &__celebration {
@@ -72,7 +74,7 @@
     }
     & .celebration__text {
       color: #24114a;
-      font-size: 24px;
+      font-size: 22px;
     }
   }
   & .image {
@@ -92,7 +94,8 @@
     align-items: center;
     gap: 20px;
     & h4 {
-      font-size: 14px;
+      font-size: 11px;
+      font-weight: 300;
     }
     & .metrics__icon {
       max-width: 30px;

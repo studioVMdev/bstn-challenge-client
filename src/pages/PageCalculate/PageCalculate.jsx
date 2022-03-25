@@ -45,7 +45,6 @@ const PageCalculate = () => {
     setYear("");
     setWears("");
     setCost("");
-    setCpw(0);
   };
 
   useEffect(() => {
@@ -63,7 +62,7 @@ const PageCalculate = () => {
       {showModal && (
         <ConfirmationModal
           closeModal={closeModal}
-          cpw={cpw}
+          cost={cpw}
         ></ConfirmationModal>
       )}
       <section className="page-title">

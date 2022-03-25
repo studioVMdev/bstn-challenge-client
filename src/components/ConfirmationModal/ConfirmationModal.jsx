@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./ConfirmationModal.scss";
-import globe from "./globe-svgrepo-com.svg";
-import celeb from "./ic_twotone-celebration.svg";
-import x from "./x.svg";
-import energy from "./energy-icon.svg";
-import water from "./water-icon.svg";
 
-export default function ConfirmationModal({ closeModal, cpw }) {
-  cpw = (Math.round(cpw * 100) / 100).toFixed(2);
+import jacket from "../../assets/images/jacket.jpg";
+import celeb from "../../assets/icons/celebration-icon.svg";
+import x from "../../assets/icons/x.svg";
+import energy from "../../assets/icons/energy-icon.svg";
+import water from "../../assets/icons/water-icon.svg";
+
+export default function ConfirmationModal({ closeModal, cost }) {
+  let cpw = (Math.round(cost * 100) / 100).toFixed(2);
   return (
     <>
       <div className="modal">
@@ -28,7 +29,7 @@ export default function ConfirmationModal({ closeModal, cpw }) {
               </div>
             </div>
             {/* <div className="modal__globe"> */}
-            <img src={globe} className="icon"></img>
+            <img src={jacket} className="image"></img>
             {/* </div> */}
             <div className="modal__celebration">
               <div className="celebration__image">

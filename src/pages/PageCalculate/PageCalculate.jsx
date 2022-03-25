@@ -36,8 +36,10 @@ const PageCalculate = () => {
     console.log("calculating...");
     console.log("result is: ", result);
     setCpw(result);
-    setSendCPW(result);
-    // setShowModal(true);
+    if (year && cost && wears) {
+      setSendCPW(result);
+      setShowModal(true);
+    }
     //! resets
     setYear("");
     setWears("");

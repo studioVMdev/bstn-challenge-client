@@ -86,10 +86,11 @@
   }
 
   &__metrics {
+    width: 70%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     & .metrics__icon {
       max-width: 30px;
     }

@@ -40,12 +40,15 @@ export default function ConfirmationModal({ closeModal, cpw }) {
               <h4>You are helping the planet by wasting less!</h4>
             </div>
             <div className="modal__metrics">
-              <img className="metrics__icon" src={energy}></img>
-              <h4> you're saving the planet!</h4>
+              <img className="metrics__icon" src={water}></img>
+              <h4> You are saving 20,000 litres of water</h4>
             </div>
             <div className="modal__metrics">
-              <img className="metrics__icon" src={water}></img>
-              <h4> you're saving the planet!</h4>
+              <img className="metrics__icon" src={energy}></img>
+              <h4>
+                You are saving something similar to the energy produced by 10
+                light bulbs
+              </h4>
             </div>
           </div>
         </div>

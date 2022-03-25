@@ -13,6 +13,7 @@ import ConfirmationModal from "../../components/ConfirmationModal/ConfirmationMo
 const PageCalculate = () => {
   const [years, setYears] = useState([2022, 2021, 2020, 2019, 2018, 2017]);
   const [showModal, setShowModal] = useState(false);
+  const [sendCPW, setSendCPW] = useState(0);
 
   const [year, setYear] = useState("");
   const handleOnYearChange = (e) => {
@@ -35,18 +36,18 @@ const PageCalculate = () => {
     console.log("calculating...");
     console.log("result is: ", result);
     setCpw(result);
+    setSendCPW(result);
+    // setShowModal(true);
     //! resets
     setYear("");
     setWears("");
     setCost("");
-    result = 0;
+    setCpw(0);
   };
 
   useEffect(() => {
     cpw && console.log("showing modal");
-    if (cpw != "") {
-      setShowModal(true);
-    }
+
     //!Show modal and pass cpd here
   }, [cpw]);
 
@@ -61,7 +62,7 @@ const PageCalculate = () => {
       {showModal && (
         <ConfirmationModal
           closeModal={closeModal}
-          cpw={cpw}
+          cpw={sendCPW}
         ></ConfirmationModal>
       )}
       <section className="page-title">
